@@ -1,0 +1,70 @@
+/* Background */
+body {
+  background: linear-gradient(to right, #1e1e2e, #2a2a3e);
+  color: white;
+}
+
+/* Title */
+.title {
+  font-size: 40px;
+  text-decoration: none;
+  color: #ff4500;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.title:hover {
+  color: #ffd700;
+}
+
+/* Search Button */
+.search-button {
+  background-color: #ff4500;
+  color: white;
+  border: none;
+}
+
+.search-button:hover {
+  background-color: #e03e00;
+}
+
+/* Card */
+.card {
+  background-color: #2a2a3e;
+  color: white;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.card-img-top {
+  width: 100%; /* Pastikan gambar memenuhi card */
+  height: 400px; /* Atur tinggi agar seragam */
+  object-fit: cover; /* Pangkas gambar agar tetap rapi */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 120px; /* Sesuaikan dengan kebutuhan */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Card Button */
+.movie-detail {
+  background-color: #ff4500;
+  border: none;
+}
+
+.movie-detail:hover {
+  background-color: #e03e00;
+}
+
+.modal-title {
+  color: black;
+}
