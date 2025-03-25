@@ -1,12 +1,14 @@
-// Fetch
+// Refactoring Fetch
+const BASE_URL = "http://www.omdbapi.com/";
+const API_KEY = "62663eca";
+
 const searchButton = document.querySelector(".search-button");
 searchButton.addEventListener("click", function () {
-  const inputKeyword = document.querySelector(".input-keyword");
-  fetch("http://www.omdbapi.com/?apikey=62663eca&s=" + inputKeyword.value)
+  const inputKeyword = document.querySelector(".input-keyword").value;
+  fetch(`${BASE_URL}?apikey=${API_KEY}&s=${inputKeyword}`)
     .then((response) => response.json())
-    .then((response) => {
-      const movies = response.Search;
-      const cards = movies.map(showCards).join("");
+    .then((results) => {
+      const cards = results.Search.map(showCards).join("");
       const movieContainer = document.querySelector(".movie-container");
       movieContainer.innerHTML = cards;
 
